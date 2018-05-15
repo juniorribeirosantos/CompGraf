@@ -17,7 +17,7 @@ seja rasterizado na tela. A sequência desses espaços é exibida na figura 1 e 
 Espaço do Objeto → Espaço do Universo
 ====
 
-<p>Compreende o espaço onde são descritas as coordenadas do objeto bem como todas as transformações geométricas realizados sob o mesmo. Essas transformações são:
+<p>Compreende o espaço onde são descritas as coordenadas do objeto bem como todas as transformações geométricas realizados sob o mesmo. Essas transformações são:</p>
 
 ESCALA - 
 SHEAR - 
@@ -25,7 +25,7 @@ TRANSLAÇÃO -
 ROTAÇÃO - 
 
 
-Como visto acima, cada transformação possui sua matriz e o produto de todas as matrizes das transformações aplicadas no objeto gera a Matriz Model, que leva o objeto do Espaço do Objeto para o Espaço do Universo. Se o objeto em questão não passar por nenhuma transformação, essa matriz é a própria identidade. Vale salientar que, como a matriz de translação é uma transformação afim e não pode ser escrita em forma de matriz, é preciso criar um espaço homogêneo com valor 1 e para passar o espaço euclidiano para o espaço homogêneo multiplicamos as coordenadas do vetor por w, onde w é a coordenada homogênea.
+<p>Como visto acima, cada transformação possui sua matriz e o produto de todas as matrizes das transformações aplicadas no objeto gera a Matriz Model, que leva o objeto do Espaço do Objeto para o Espaço do Universo. Se o objeto em questão não passar por nenhuma transformação, essa matriz é a própria identidade. Vale salientar que, como a matriz de translação é uma transformação afim e não pode ser escrita em forma de matriz, é preciso criar um espaço homogêneo com valor 1 e para passar o espaço euclidiano para o espaço homogêneo multiplicamos as coordenadas do vetor por w, onde w é a coordenada homogênea.</p>
 
 
 
@@ -33,22 +33,28 @@ Como visto acima, cada transformação possui sua matriz e o produto de todas as
 Espaço do Universo → Espaço de Câmera
 ====
 
-No espaço do Universo, se encontram todos os objetos após aplicadas as suas transformações. Nele, são definidas as coordenadas da câmera (posição da câmera, vetor de direção e direção do topo da câmera) para indicar de onde serão visualizados os objetos. A construção da Matriz View, que leva a o objeto do espaço do universo para o espaço da câmera é composta pelos valores da posição da câmera (Xc, Yc, Zc) e podem ser encontrados da seguinte forma: 
+<p>No espaço do Universo, se encontram todos os objetos após aplicadas as suas transformações. Nele, são definidas as coordenadas da câmera (posição da câmera, vetor de direção e direção do topo da câmera) para indicar de onde serão visualizados os objetos. A construção da Matriz View, que leva a o objeto do espaço do universo para o espaço da câmera é composta pelos valores da posição da câmera (Xc, Yc, Zc) e podem ser encontrados da seguinte forma: </p>
 
-Para encontrarmos o Zc, é preciso calcular a diferença existente entre a posição da câmera e a direção para onde a câmera está olhando e dividir pela norma dessa diferença, garantindo assim que Zc é um vetor unitário.
+<p>Para encontrarmos o Zc, é preciso calcular a diferença existente entre a posição da câmera e a direção para onde a câmera está olhando e dividir pela norma dessa diferença, garantindo assim que Zc é um vetor unitário.</p>
 
+```
 Zc =(camera_posição – camera_lookat) / norm(camera_posição – camera_lookat);
+```
 
-Para calcularmos o Xc calculamos o produto vetorial entre a direção do topo da câmera o up da câmera e a direção para onde a câmera está olhando. Depois, assim como fizemos com o Zc, dividimos pela norma desse produto  para garantir que seja um vetor unitário.
+<p>Para calcularmos o Xc calculamos o produto vetorial entre a direção do topo da câmera o up da câmera e a direção para onde a câmera está olhando. Depois, assim como fizemos com o Zc, dividimos pela norma desse produto  para garantir que seja um vetor unitário.</p>
 
+```
 Xc= cross(camera_up, z_camera) / norm(cross(camera_up, z_camera));
+```
 
-E para encontrar o Yc, calculamos o produto vetorial entre o Zc e o Xc seguindo a logica anterior, dividimos pela norma desse produto. 
 
+<p>E para encontrar o Yc, calculamos o produto vetorial entre o Zc e o Xc seguindo a logica anterior, dividimos pela norma desse produto. </p>
+ 
+```
 Yc = cross(z_camera, x_camera) / norm(cross(z_camera, x_camera));
+```
 
-Encontrados esses valores, podemos construir a Matriz que leve os vértices do espaço universo para o espaço da câmera. Mas antes, temos que lembrar que a matriz deve ser transposta. Além disso, nem sempre o sistema de coordenadas do universo é o mesmo da câmera. Por isso é necessário transladar a câmera para a origem do sistema de coordenadas para alinhar a câmera com o universo, e essa translação equivale a posição da câmera.
- Logo, nossa Matriz View constituída uma rotação e uma translação.
+<p>Encontrados esses valores, podemos construir a Matriz que leve os vértices do espaço universo para o espaço da câmera. Mas antes, temos que lembrar que a matriz deve ser transposta. Além disso, nem sempre o sistema de coordenadas do universo é o mesmo da câmera. Por isso é necessário transladar a câmera para a origem do sistema de coordenadas para alinhar a câmera com o universo, e essa translação equivale a posição da câmera. Logo, nossa Matriz View constituída uma rotação e uma translação.</p>
 
 
 
