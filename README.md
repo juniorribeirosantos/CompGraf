@@ -21,11 +21,13 @@ Espaço do Objeto → Espaço do Universo
 
 <h3><b>ESCALA</b></h3>
 <p> Consiste em mudar a dimenção de uma imagem, fazendo com que ela mude de tamanho. Para isso, os valores de suas coordenadas são multiplicados por um fator escala. Essa transformação pode ser escrita através da seguinte matriz:</p>
+
 ![alt text](https://i.imgur.com/cPR0Y6G.jpg "Escala")
 
 <h3><b>SHEAR</b></h3>
 <p> Transformação que desloca cada ponto em uma direção fixada. </p>
-![alt text](https://i.imgur.com/cPR0Y6G.jpg "Escala")
+
+![alt text](https://i.imgur.com/cPR0Y6G.jpg "Shear")
 
 <h3><b>TRASLAÇÃO</b></h3>
 <p> Transformação que altera a posição dos pontos através da soma do vetor de deslocamento às suas coordenadas. Pode ser descrito pela seguinte matriz: </p>
@@ -36,7 +38,6 @@ Espaço do Objeto → Espaço do Universo
 
 <p> Consiste em um giro de um determinado ângulo em torno de um ponto de modo que a distância entre eles não é alterada. Pode ser representada através da seguinte matriz:</p>
 
-![alt text](https://imgur.com/WNdacIA "Rotação")
 ![alt text](https://i.imgur.com/WNdacIA.jpg "Rotação")
 
 Em 3D, as transformações tem suas matrizes alteradas com o acréscimo da coordenada Z. No caso da rotação, a matriz varia de acordo com o eixo a ser rotacionado. 
