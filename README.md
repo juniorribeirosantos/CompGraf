@@ -12,6 +12,7 @@ da disciplina, Christian Azambuja Pagot, e o algoritmo de rasterização de prim
 de passos que caracterizam o pipeline gráfico, levando o objeto de um espaço para outro até que ele
 seja rasterizado na tela. A sequência desses espaços é exibida na figura 1 e descrita logo em seguida.</p>
 
+![alt text](https://i.imgur.com/AKk1hg7.jpg "Pipeline")
 
 
 Espaço do Objeto → Espaço do Universo
@@ -85,6 +86,8 @@ uma câmera, penas os objetos contidos entre esse ângulo poderão ser renderiza
 transformação, a coordenada w é alterada.</p>
 
 <p>Para a construção dessa Matriz de Projeção, utilizamos a distância entre a câmera e o view plane.</p>
+
+![alt text](https://i.imgur.com/wY5OfyV.jpg "Espaço Camera --> Espaço Recorte")
 
 
 
