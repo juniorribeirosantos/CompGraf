@@ -21,18 +21,15 @@ Espaço do Objeto → Espaço do Universo
 
 <h3><b>ESCALA</b></h3>
 <p> Consiste em mudar a dimenção de uma imagem, fazendo com que ela mude de tamanho. Para isso, os valores de suas coordenadas são multiplicados por um fator escala. Essa transformação pode ser escrita através da seguinte matriz:</p>
-![alt text](https://imgur.com/a/gEz1zxv "Escala")
 ![alt text](https://i.imgur.com/cPR0Y6G.jpg "Escala")
 
 <h3><b>SHEAR</b></h3>
 <p> Transformação que desloca cada ponto em uma direção fixada. </p>
-![alt text](https://imgur.com/Wd8xW2q "Shear")
 ![alt text](https://i.imgur.com/cPR0Y6G.jpg "Escala")
 
 <h3><b>TRASLAÇÃO</b></h3>
 <p> Transformação que altera a posição dos pontos através da soma do vetor de deslocamento às suas coordenadas. Pode ser descrito pela seguinte matriz: </p>
 
-![alt text](https://imgur.com/BtcaEyI "Translação")
 ![alt text](https://i.imgur.com/BtcaEyI.jpg "Translação")
 
 <h3><b>ROTAÇÃO</b></h3>
@@ -71,7 +68,7 @@ Xc= cross(camera_up, z_camera) / norm(cross(camera_up, z_camera));
 Yc = cross(z_camera, x_camera) / norm(cross(z_camera, x_camera));
 ```
 
-![alt text](https://imgur.com/HXd4OHA "Espaço Uniferso --> Espaço Camera")
+![alt text](https://i.imgur.com/HXd4OHA.jpg "Espaço Uniferso --> Espaço Camera")
 
 <p>Encontrados esses valores, podemos construir a Matriz que leve os vértices do espaço universo para o espaço da câmera. Mas antes, temos que lembrar que a matriz deve ser transposta. Além disso, nem sempre o sistema de coordenadas do universo é o mesmo da câmera. Por isso é necessário transladar a câmera para a origem do sistema de coordenadas para alinhar a câmera com o universo, e essa translação equivale a posição da câmera. Logo, nossa Matriz View constituída uma rotação e uma translação.</p>
 
