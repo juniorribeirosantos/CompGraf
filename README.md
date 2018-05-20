@@ -22,24 +22,24 @@ Espaço do Objeto → Espaço do Universo
 <h3><b>ESCALA</b></h3>
 <p> Consiste em mudar a dimenção de uma imagem, fazendo com que ela mude de tamanho. Para isso, os valores de suas coordenadas são multiplicados por um fator escala. Essa transformação pode ser escrita através da seguinte matriz:
 ![alt text](https://i.imgur.com/Hs1qKUw.png "Escala")
+</p>
 
+<h3><b>SHEAR</b></h3>
+<p> Transformação que desloca cada ponto em uma direção fixada. </p>
 
-
-
-
+<h3><b>TRASLAÇÃO</b></h3>
+<p> Transformação que altera a posição dos pontos através da soma do vetor de deslocamento às suas coordenadas. Pode ser descrito pela seguinte matriz:
+![alt text](https://i.imgur.com/p3t4b9E.png "Translação")
 </p>
 
 
+<h3><b>ROTAÇÃO</b></h3>
 
-<h3><b>SHEAR</b></h3>  <p></p>
+<p> Consiste em um giro de um determinado ângulo em torno de um ponto de modo que a distância entre eles não é alterada. Pode ser representada através da seguinte matriz:
 
+</p>
 
-<h3><b>TRASLAÇÃO</b></h3>  <p></p>
-
-
-
-<h3><b>ROTAÇÃO</b></h3>  <p></p>
-
+Em 3D, as transformações tem suas matrizes alteradas com o acréscimo da coordenada Z
 
 <p>Como visto acima, cada transformação possui sua matriz e o produto de todas as matrizes das transformações aplicadas no objeto gera a Matriz Model, que leva o objeto do Espaço do Objeto para o Espaço do Universo. Se o objeto em questão não passar por nenhuma transformação, essa matriz é a própria identidade. Vale salientar que, como a matriz de translação é uma transformação afim e não pode ser escrita em forma de matriz, é preciso criar um espaço homogêneo com valor 1 e para passar o espaço euclidiano para o espaço homogêneo multiplicamos as coordenadas do vetor por w, onde w é a coordenada homogênea.</p>
 
