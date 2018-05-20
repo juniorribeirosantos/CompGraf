@@ -21,28 +21,30 @@ Espaço do Objeto → Espaço do Universo
 
 <h3><b>ESCALA</b></h3>
 <p> Consiste em mudar a dimenção de uma imagem, fazendo com que ela mude de tamanho. Para isso, os valores de suas coordenadas são multiplicados por um fator escala. Essa transformação pode ser escrita através da seguinte matriz:</p>
-![alt text](https://i.imgur.com/Hs1qKUw.png "Escala")
+![alt text](https://imgur.com/a/gEz1zxv "Escala")
+![alt text](https://i.imgur.com/cPR0Y6G.jpg "Escala")
 
 <h3><b>SHEAR</b></h3>
 <p> Transformação que desloca cada ponto em uma direção fixada. </p>
+![alt text](https://imgur.com/Wd8xW2q "Shear")
+![alt text](https://i.imgur.com/cPR0Y6G.jpg "Escala")
 
 <h3><b>TRASLAÇÃO</b></h3>
-<p> Transformação que altera a posição dos pontos através da soma do vetor de deslocamento às suas coordenadas. Pode ser descrito pela seguinte matriz:
-![alt text](https://i.imgur.com/p3t4b9E.png "Translação")
-</p>
+<p> Transformação que altera a posição dos pontos através da soma do vetor de deslocamento às suas coordenadas. Pode ser descrito pela seguinte matriz: </p>
 
+![alt text](https://imgur.com/BtcaEyI "Translação")
+![alt text](https://i.imgur.com/BtcaEyI.jpg "Translação")
 
 <h3><b>ROTAÇÃO</b></h3>
 
-<p> Consiste em um giro de um determinado ângulo em torno de um ponto de modo que a distância entre eles não é alterada. Pode ser representada através da seguinte matriz:
+<p> Consiste em um giro de um determinado ângulo em torno de um ponto de modo que a distância entre eles não é alterada. Pode ser representada através da seguinte matriz:</p>
 
-</p>
+![alt text](https://imgur.com/WNdacIA "Rotação")
+![alt text](https://i.imgur.com/WNdacIA.jpg "Rotação")
 
-Em 3D, as transformações tem suas matrizes alteradas com o acréscimo da coordenada Z
+Em 3D, as transformações tem suas matrizes alteradas com o acréscimo da coordenada Z. No caso da rotação, a matriz varia de acordo com o eixo a ser rotacionado. 
 
 <p>Como visto acima, cada transformação possui sua matriz e o produto de todas as matrizes das transformações aplicadas no objeto gera a Matriz Model, que leva o objeto do Espaço do Objeto para o Espaço do Universo. Se o objeto em questão não passar por nenhuma transformação, essa matriz é a própria identidade. Vale salientar que, como a matriz de translação é uma transformação afim e não pode ser escrita em forma de matriz, é preciso criar um espaço homogêneo com valor 1 e para passar o espaço euclidiano para o espaço homogêneo multiplicamos as coordenadas do vetor por w, onde w é a coordenada homogênea.</p>
-
-
 
 
 Espaço do Universo → Espaço de Câmera
@@ -68,6 +70,8 @@ Xc= cross(camera_up, z_camera) / norm(cross(camera_up, z_camera));
 ```
 Yc = cross(z_camera, x_camera) / norm(cross(z_camera, x_camera));
 ```
+
+![alt text](https://imgur.com/HXd4OHA "Espaço Uniferso --> Espaço Camera")
 
 <p>Encontrados esses valores, podemos construir a Matriz que leve os vértices do espaço universo para o espaço da câmera. Mas antes, temos que lembrar que a matriz deve ser transposta. Além disso, nem sempre o sistema de coordenadas do universo é o mesmo da câmera. Por isso é necessário transladar a câmera para a origem do sistema de coordenadas para alinhar a câmera com o universo, e essa translação equivale a posição da câmera. Logo, nossa Matriz View constituída uma rotação e uma translação.</p>
 
