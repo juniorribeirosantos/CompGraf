@@ -46,6 +46,7 @@ Em 3D, as transformações tem suas matrizes alteradas com o acréscimo da coord
 <p>Como visto acima, cada transformação possui sua matriz e o produto de todas as matrizes das transformações aplicadas no objeto gera a Matriz Model, que leva o objeto do Espaço do Objeto para o Espaço do Universo. Se o objeto em questão não passar por nenhuma transformação, essa matriz é a própria identidade. Vale salientar que, como a matriz de translação é uma transformação afim e não pode ser escrita em forma de matriz, é preciso criar um espaço homogêneo com valor 1 e para passar o espaço euclidiano para o espaço homogêneo multiplicamos as coordenadas do vetor por w, onde w é a coordenada homogênea.</p>
 
 
+
 Espaço do Universo → Espaço de Câmera
 ====
 
@@ -85,12 +86,11 @@ da cena, há uma distorção perspectiva onde os objetos próximos se tornam mai
 uma câmera, penas os objetos contidos entre esse ângulo poderão ser renderizados posteriormente. Vale lembrar que nessa
 transformação, a coordenada w é alterada.</p>
 
-<p>Para a construção dessa Matriz de Projeção, utilizamos a distância entre a câmera e o view plane.</p>
-
 ![alt text](https://i.imgur.com/wY5OfyV.jpg "Espaço Camera --> Espaço Recorte")
 
+<p>Para a construção dessa Matriz de Projeção, utilizamos a distância entre a câmera e o view plane.</p>
 
-
+![alt text](https://i.imgur.com/Wldfz1Z.jpg "Matriz de Projeção")
 
 
 
