@@ -106,11 +106,18 @@ objetos próximos da câmera ficam maiores, e os mais afastados ficam menores.</
 
 Espaço Canônico → Espaço de Tela
 ====
+
+![alt text](https://i.imgur.com/EDHmHy2.jpg "Tela")
+
+
 <p>Agora, os objetos poderão ser representados em pixels utilizando, para isso, o código da atividade anterior de rasterização
 de primitivas. Como no espaço de tela o início do sistema de coordenadas está localizado no canto superior esquerdo, algumas
 transformações são necessárias: uma escala anisotrópica do objeto para inverter o eixo y de modo que o objeto apareça no local
 correto, uma translação de 1 nos eixos x e y para garantir que os valores das coordenadas sejam maiores ou iguais a zero e por
 últimos fazemos uma escala em x com [(largura da tela -1/)2] e no  y[(altura da tela-1)/2].</p>
+
+
+![alt text](https://i.imgur.com/LL8VUnb.jpg "Matriz para Espaço de Tela")
 
 
 
