@@ -20,9 +20,8 @@ Espaço do Objeto → Espaço do Universo
 <p>Compreende o espaço onde são descritas as coordenadas do objeto bem como todas as transformações geométricas realizados sob o mesmo. Essas transformações são:</p>
 
 <h3><b>ESCALA</b></h3>
-<p> Consiste em mudar a dimenção de uma imagem, fazendo com que ela mude de tamanho. Para isso, os valores de suas coordenadas são multiplicados por um fator escala. Essa transformação pode ser escrita através da seguinte matriz:
+<p> Consiste em mudar a dimenção de uma imagem, fazendo com que ela mude de tamanho. Para isso, os valores de suas coordenadas são multiplicados por um fator escala. Essa transformação pode ser escrita através da seguinte matriz:</p>
 ![alt text](https://i.imgur.com/Hs1qKUw.png "Escala")
-</p>
 
 <h3><b>SHEAR</b></h3>
 <p> Transformação que desloca cada ponto em uma direção fixada. </p>
